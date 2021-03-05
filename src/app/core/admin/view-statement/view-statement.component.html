@@ -1,0 +1,328 @@
+<div class="header pb-6">
+    <div class="container-fluid">
+        <div class="header-body">
+            <div class="row align-items-center py-4">
+                <div class="col-lg-12 col-7">
+                    <h6 class="h2 text-dark d-inline-block mb-0"> View Statement </h6>
+
+                    <nav aria-label="breadcrumb" class=" d-none d-md-inline-block ml-md-4">
+                        <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
+                            <li class="breadcrumb-item">
+                                <a href="javascript:void(0)">
+                                    <i class="fa fa-user text-dark"></i>
+                                </a>
+                            </li>
+                            <li class="breadcrumb-item">
+                                <a href="javascript:void(0)" class="text-dark"> My Account </a>
+                            </li>
+                            <li aria-current="page" class="breadcrumb-item active">
+                                View Statement
+                            </li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid mt--6">
+    <div class="row">
+        <div class="col-xl-12">
+            <div class="card">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-lg-3">
+                            <p class="h3 mb-0"><b>View Statement for Year:</b></p>
+                        </div>
+                        <div class="col-lg-4">
+                            <select class="form-control custom-select">
+                                <option hidden selected>Please pick</option>
+                                <option> 2020 </option>
+                                <option> 2021 </option>
+                            </select>
+                        </div>
+                        <div class="col-lg-5 mt-0">
+                            <button type="button" class="btn btn-default" style="border-radius: 15px;">
+                                Search
+                            </button>
+                        </div>
+
+                        <div class="col-xl-12 try-text">
+                            <h3><b>Jumlah Simpanan: RM1000</b></h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xl-12">
+            <div class="accordian">
+                <div class="card">
+                    <accordion [isAnimated]="true">
+                        <accordion-group heading="RINGKASAN AKAUN" [isOpen]="isFirstOpen">
+                            <div class=" table-responsive">
+                                <table class=" table align-items-center table-flush">
+                                    <thead class=" thead-light">
+                                        <tr>
+                                            <th class=" sort" data-sort="name" scope="col">Jenis Akaun</th>
+
+                                            <th class=" sort" data-sort="budget" scope="col">Baki Pembuka (RM)</th>
+
+                                            <th class=" sort" data-sort="status" scope="col">Masuk (RM)</th>
+
+                                            <th class=" sort" data-sort="status1" scope="col">Keluar (RM)</th>
+
+                                            <th class=" sort" data-sort="status2" scope="col">Dividen Tahunan <span
+                                                    class="tex-red">*</span> (RM)</th>
+
+                                            <th class=" sort" data-sort="status3" scope="col">JUMLAH (RM)</th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody class=" list">
+                                        <tr>
+                                            <th scope="row">
+                                                <div class=" media align-items-center">
+                                                    <div class=" media-body">
+                                                        <span class=" name mb-0 text-sm">
+                                                            Akaun 1
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </th>
+
+                                            <td class=" budget">RM0.00</td>
+
+                                            <td class=" status">RM700</td>
+
+                                            <td class=" status1">RM0.00</td>
+
+                                            <td class=" status2">RM0.00</td>
+
+                                            <td class=" status3">RM700</td>
+                                        </tr>
+
+                                        <tr>
+                                            <th scope="row">
+                                                <div class=" media align-items-center">
+                                                    <div class=" media-body">
+                                                        <span class=" name mb-0 text-sm">
+                                                            Akaun 2
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </th>
+
+                                            <td class=" budget">RM0.00</td>
+
+                                            <td class=" status">RM300</td>
+
+                                            <td class=" status1">RM0.00</td>
+
+                                            <td class=" status2">RM0.00</td>
+
+                                            <td class=" status3">RM300</td>
+                                        </tr>
+
+                                        <tr>
+                                            <th scope="row">
+                                                <div class=" media align-items-center">
+                                                    <div class=" media-body">
+                                                        <span class=" name mb-0 text-sm">
+                                                            <b>JUMLAH</b>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </th>
+
+                                            <td class=" budget"><b>RM0.00</b></td>
+
+                                            <td class=" status"><b>RM1000</b></td>
+
+                                            <td class=" status1"><b>RM0.00</b></td>
+
+                                            <td class=" status2"><b>RM0.00</b></td>
+
+                                            <td class=" status3"><b>RM1000</b></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <span>
+                                <ol>
+                                    *Nota:
+                                    <li>Dividen Tahun 2021: Dividen Belum Diisytiharkan</li>
+                                    <li>Selain dari Akaun 1 dan Akaun 2, rujuk penyata sub-akaun bagi butiran terperinci.</li>
+                                </ol>
+                            </span>
+                        </accordion-group>
+
+                        <accordion-group heading="CARUMAN SEMASA">
+                            <div class=" table-responsive">
+                                <table class=" table align-items-center table-flush">
+                                    <thead class=" thead-light">
+                                        <tr>
+                                            <th class=" sort" data-sort="name" scope="col">Bulan Caruman</th>
+
+                                            <th class=" sort" data-sort="budget" scope="col">Transaksi</th>
+
+                                            <th class=" sort" data-sort="status" scope="col">Tarikh</th>
+
+                                            <th class=" sort" data-sort="status1" scope="col">Caruman Majikan (RM)</th>
+
+                                            <th class=" sort" data-sort="status2" scope="col">Caruman Ahli (RM)</th>
+
+                                            <th class=" sort" data-sort="status3" scope="col">JUMLAH (RM)</th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody class=" list">
+                                        <tr>
+                                            <th scope="row">
+                                                <div class=" media align-items-center">
+                                                    <div class=" media-body">
+                                                        <span class=" name mb-0 text-sm">
+                                                            Jan-21
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </th>
+
+                                            <td class=" budget">Caruman - IWS</td>
+
+                                            <td class=" status">16/01/2021</td>
+
+                                            <td class=" status1">130.00</td>
+
+                                            <td class=" status2">70.00</td>
+
+                                            <td class=" status3">200.00</td>
+                                        </tr>
+
+                                        <tr>
+                                            <th scope="row">
+                                                <div class=" media align-items-center">
+                                                    <div class=" media-body">
+                                                        <span class=" name mb-0 text-sm">
+                                                            Feb-21
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </th>
+
+                                            <td class=" budget">Caruman - IWS</td>
+
+                                            <td class=" status">17/02/2021</td>
+
+                                            <td class=" status1">364.00</td>
+
+                                            <td class=" status2">308.00</td>
+
+                                            <td class=" status3">672.00</td>
+                                        </tr>
+
+                                        <tr>
+                                            <th scope="row">
+                                                <div class=" media align-items-center">
+                                                    <div class=" media-body">
+                                                        <span class=" name mb-0 text-sm">
+                                                            <b>JUMLAH</b>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </th>
+
+                                            <td class=" budget"> </td>
+
+                                            <td class=" status"> </td>
+
+                                            <td class=" status1"> </td>
+
+                                            <td class=" status2"> </td>
+
+                                            <td class=" status3"><b>872.00</b></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </accordion-group>
+
+                        <accordion-group heading="PENGELUARAN">
+                            <div class=" table-responsive">
+                                <table class=" table align-items-center table-flush">
+                                    <thead class=" thead-light">
+                                        <tr>
+                                            <th class=" sort" data-sort="name" scope="col">Transaksi</th>
+
+                                            <th class=" sort" data-sort="budget" scope="col">Tarikh</th>
+
+                                            <th class=" sort" data-sort="status1" scope="col">Amaun (RM)</th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody class=" list">
+                                        <tr>
+                                            <td class=" budget">Tiada Transaksi</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </accordion-group>
+
+                        <accordion-group heading="PENYELARASAN DAN CARUMAN TERTUNGGAK">
+                            <div class=" table-responsive">
+                                <table class=" table align-items-center table-flush">
+                                    <thead class=" thead-light">
+                                        <tr>
+                                            <th class=" sort" data-sort="name" scope="col">Transaksi</th>
+
+                                            <th class=" sort" data-sort="budget" scope="col">Tarikh</th>
+
+                                            <th class=" sort" data-sort="status1" scope="col">Bulan Caruman</th>
+
+                                            <th class=" sort" data-sort="budget" scope="col">Masuk (RM)</th>
+
+                                            <th class=" sort" data-sort="status1" scope="col">Keluar (RM)</th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody class=" list">
+                                        <tr>
+                                            <td class=" budget">Tiada Transaksi</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </accordion-group>
+                    </accordion>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xl-12">
+            <div class="card">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <p class="h3 mb-0"><b>Print/Download Statement:</b></p>
+                        </div>
+                        <div class="col-lg-4">
+                            <select class="form-control custom-select">
+                                <option hidden selected>Please pick</option>
+                                <option> Summary Statement </option>
+                                <option> Details Statement </option>
+                            </select>
+                        </div>
+                        <div class="col-lg-4 mt-0">
+                            <button type="button" class="btn btn-default" style="border-radius: 15px;">
+                                Download
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

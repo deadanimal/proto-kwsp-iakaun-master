@@ -1,0 +1,140 @@
+<div class="header pb-6">
+    <div class="container-fluid">
+        <div class="header-body">
+            <div class="row align-items-center py-4">
+                <div class="col-lg-12 col-7">
+                    <h6 class="h2 text-dark d-inline-block mb-0"> e-Cancellation </h6>
+
+                    <nav aria-label="breadcrumb" class=" d-none d-md-inline-block ml-md-4">
+                        <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
+                            <li class="breadcrumb-item">
+                                <a href="javascript:void(0)">
+                                    <i class="fas fa-hand-holding-usd text-dark"></i>
+                                </a>
+                            </li>
+                            <li class="breadcrumb-item">
+                                <a href="javascript:void(0)" class="text-dark"> Withdrawal </a>
+                            </li>
+                            <li aria-current="page" class="breadcrumb-item active">
+                                e-Cancellation
+                            </li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid mt--6">
+    <div class="row">
+        <div class="col-xl-12">
+            <div class="card">
+                <div class="card-body">
+                    <div class="dataTables_wrapper py-4">
+                        <div class="row">
+                            <div class="col-sm-12 col-md-6">
+                                <div class="dataTables_length" id="datatable_length">
+                                    <label>
+                                        Show
+                                        <select name="datatable_length" aria-controls="datatable"
+                                            class="form-control form-control-sm" (change)="entriesChange($event)">
+                                            <option value="5" [selected]="entries==5">5</option>
+                                            <option value="10" [selected]="entries==10">10</option>
+                                            <option value="15" [selected]="entries==15">15</option>
+                                            <option value="-1" [selected]="entries==-1">All</option>
+                                        </select>
+                                        entries
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-md-6">
+                                <div id="datatable_filter" class="dataTables_filter">
+                                    <label>
+                                        <input type="search" class="form-control form-control-sm"
+                                            placeholder="Search records" aria-controls="datatable"
+                                            (keyup)="filterTable($event)" />
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <ngx-datatable class="bootstrap selection-cell" [columnMode]="'force'" [headerHeight]="50"
+                            [footerHeight]="50" [rowHeight]="'auto'" [limit]="entries != -1 ? entries:undefined"
+                            [rows]="temp">
+
+                            <!-- <ngx-datatable-column name="No">
+                                <ng-template let-rowIndex="rowIndex" let-row="row" ngx-datatable-cell-template>
+                                    <strong>{{ rowIndex + 1 }}</strong>
+                                </ng-template>
+                            </ngx-datatable-column> -->
+                            <ngx-datatable-column name="Submitted Date">
+                                <ng-template let-row="row" ngx-datatable-cell-template>
+                                    {{row.submitDate}}
+                                </ng-template>
+                            </ngx-datatable-column>
+                            <ngx-datatable-column name="Withdrawal Type">
+                                <ng-template let-row="row" ngx-datatable-cell-template>
+                                    {{row.type}}
+                                </ng-template>
+                            </ngx-datatable-column>
+                            <ngx-datatable-column name="Payment Option">
+                                <ng-template let-row="row" ngx-datatable-cell-template>
+                                    {{row.payment}}
+                                </ng-template>
+                            </ngx-datatable-column>
+                            <ngx-datatable-column name="Refence No.">
+                                <ng-template let-row="row" ngx-datatable-cell-template>
+                                    {{row.refer}}
+                                </ng-template>
+                            </ngx-datatable-column>
+                            <ngx-datatable-column name="Submitted Channel">
+                                <ng-template let-row="row" ngx-datatable-cell-template>
+                                    {{row.submitChannel}}
+                                </ng-template>
+                            </ngx-datatable-column>
+                            <ngx-datatable-column name="Applied Amount (RM)">
+                                <ng-template let-row="row" ngx-datatable-cell-template>
+                                    {{row.amount}}
+                                </ng-template>
+                            </ngx-datatable-column>
+                            <ngx-datatable-column name="Application Status">
+                                <!-- <ng-template ngx-datatable-header-template>
+								<span> Announcement Status </span>
+								</ng-template> -->
+                                <ng-template let-row="row" ngx-datatable-cell-template>
+                                    <span *ngIf="row.status == 'approved'"
+                                        class="badge badge-pill badge-success">Active Recurring Payment</span>
+                                    <!-- <span *ngIf="row.status == 'tobepublish'" class="badge badge-pill badge-warning">To
+                                        be published</span> -->
+                                    <span *ngIf="row.status == 'reject'"
+                                        class="badge badge-pill badge-danger">Reject</span>
+                                </ng-template>
+                            </ngx-datatable-column>
+                            <ngx-datatable-column name="Approved Date">
+                                <ng-template let-row="row" ngx-datatable-cell-template>
+                                    {{row.approvedDate}}
+                                </ng-template>
+                            </ngx-datatable-column>
+                            <ngx-datatable-column name="Action">
+                                <ng-template let-row="row" ngx-datatable-cell-template>
+                                    <button class=" btn btn-icon btn-danger btn-sm" type="button" title="Action" (click)="confirm()">
+                                        <span class=" btn-inner--icon"> <i class=" fas fa-times-circle"> </i> </span>
+                                    </button>
+                                    <!-- <button class=" btn btn-icon btn-default btn-sm" type="button" title="View"
+                                        (click)="openModal(viewAction)">
+                                        <span class=" btn-inner--icon"> <i class=" far fa-eye"> </i> </span>
+                                    </button> -->
+                                    <!-- <button class=" btn btn-icon btn-success btn-sm" type="button" title="Edit" (click)="openModal(edit)">
+                                        <span class=" btn-inner--icon"> <i class=" fas fa-edit"> </i> </span>
+                                    </button> -->
+                                    <span>-</span>
+                                </ng-template>
+                            </ngx-datatable-column>
+                        </ngx-datatable>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

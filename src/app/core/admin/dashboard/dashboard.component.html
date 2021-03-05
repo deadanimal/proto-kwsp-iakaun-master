@@ -1,0 +1,163 @@
+<div class="header pb-6">
+	<div class="container-fluid">
+		<div class="header-body">
+			<div class="row align-items-center py-4">
+				<div class="col-lg-6 col-7">
+					<h6 class="h2 text-dark d-inline-block mb-0">Dashboard</h6>
+
+					<nav aria-label="breadcrumb" class=" d-none d-md-inline-block ml-md-4">
+						<ol class="breadcrumb breadcrumb-links breadcrumb-dark">
+							<li class=" breadcrumb-item">
+								<a href="javascript:void(0)"> <i class="fas fa-home text-dark"> </i> </a>
+							</li>
+						</ol>
+					</nav>
+				</div>
+
+				<!-- <div class="col-lg-6 col-5 text-right">
+					<a class="btn btn-sm btn-neutral" href="javascript:void(0)"> New </a>
+
+					<a class="btn btn-sm btn-neutral" href="javascript:void(0)">
+						Filters
+					</a>
+				</div> -->
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="container-fluid mt--6">
+	<div class="row">
+		<div class="col-xl-12">
+			<div class="card">
+				<div class="card-body">
+					<h5 class="h3 mb-0"> Welcome ALI IMRAN! </h5>
+					<h6 class="h4 mb-0"> Last login 01-Jan-2020 12.00:00 PM </h6>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-xl-12">
+			<div class="card">
+				<div class="card-header bg-secondary">
+					<div class="row align-items-center">
+						<div class="col">
+							<h5 class="h3 mb-0"> Account Summary </h5>
+						</div>
+					</div>
+				</div>
+
+				<div class="card-body">
+					<div class="chart">
+						<div class="amchart" id="chartdashboarddonut1"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-xl-12">
+			<div class="accordion">
+				<div class="card">
+					<accordion [isAnimated]="true">
+						<accordion-group heading="Retirement Savings">
+							<p><strong>This calculator helps to estimate your total savings in EPF when you retire.</strong></p>
+
+							<p><strong>You may click below button to calculate your Potential Retirement Savings.</strong></p>
+
+							<button type="button" class="btn btn-default mt-2" style="border-radius: 15px;">
+								Calculate Retirement Savings
+							</button>
+						</accordion-group>
+					</accordion>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-xl-12">
+			<div class="card">
+				<div class="card-header bg-secondary">
+					<div class="row align-items-center">
+						<div class="col">
+							<h5 class="h3 mb-0"> Attention </h5>
+						</div>
+					</div>
+				</div>
+
+				<div class="card-body">
+					<p><strong>Click <a href="#">here</a> to update your address and contact information</strong></p>
+
+					<p><strong>Click <a href="#">here</a> to check your Nomination Status.</strong></p>
+				</div>
+			</div>
+		</div>
+
+		<!-- <div class="col-xl-8">
+			<div class="card">
+				<div class="card-header bg-secondary">
+					<div class="row align-items-center">
+						<div class="col">
+							<h6 class="text-muted text-uppercase ls-1 mb-1">Chart</h6>
+
+							<h5 class="h3 mb-0">Department</h5>
+						</div>
+
+						<div class="col">
+							<ul class="nav nav-pills justify-content-end">
+								<li class="nav-item mr-2 mr-md-0" data-toggle="chart" data-target="#chart-sales">
+                                    <a 
+                                        href="javascript:void(0)"
+                                        class="nav-link py-2 px-3"
+                                        [ngClass]="{ active: clicked === true }"
+                                        data-toggle="tab"
+                                        (click)="clicked = true; clicked1 = false"
+                                    >
+										<span class="d-none d-md-block">Monthly</span>
+										<span class="d-md-none">M</span>
+									</a>
+								</li>
+								<li class="nav-item" data-toggle="chart" data-target="#chart-sales">
+                                    <a 
+                                        href="javascript:void(0)"
+                                        class="nav-link py-2 px-3"
+                                        [ngClass]="{ active: clicked1 === true }" 
+                                        data-toggle="tab"
+                                        (click)="clicked = false; clicked1 = true"
+                                    >
+										<span class="d-none d-md-block">Weekly</span>
+										<span class="d-md-none">W</span>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<div class="card-body">
+					<div class="chart">
+                        <div class="amchart" id="chartdiv"></div>
+					</div>
+				</div>
+			</div>
+		</div> -->
+
+		<!-- <div class="col-xl-4">
+			<div class="card">
+				<div class="card-header bg-secondary">
+					<div class="row align-items-center">
+						<div class="col">
+							<h6 class="text-uppercase text-muted ls-1 mb-1">Chart</h6>
+
+							<h5 class="h3 mb-0">Trend</h5>
+						</div>
+					</div>
+				</div>
+
+				<div class="card-body">
+					<div class="chart">
+						<div class="amchart" id="chartdiv1"></div>
+					</div>
+				</div>
+			</div>
+		</div> -->
+	</div>
+</div>

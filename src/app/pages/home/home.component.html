@@ -1,0 +1,205 @@
+<div class="container-fluid" style="padding:0 !important;">
+    <div class="row">
+        <div class="col-xl-12 p-0">
+            <carousel [interval]="myInterval" [(activeSlide)]="activeSlideIndex">
+                <slide *ngFor="let slide of slides; let index=index">
+                    <img class="img-carousel" [src]="slide.image" alt="image slide">
+
+                    <!-- <div class="carousel-caption">
+                        <h4>Slide {{index}}</h4>
+                        <p>{{slide.text}}</p>
+                    </div> -->
+                </slide>
+            </carousel>
+        </div>
+
+        <div class="col-xl-12">
+            <div class="card">
+                <div class="row">
+                    <div class="col-lg-3 box">
+                        <div class="card-body">
+                            <img class="" src="assets/img/theme/member.png" alt="Member">
+                            <h3>I'm a Member (i-Akaun)</h3>
+                            <button class=" btn btn-try btn-outline-default" type="button"
+                                (click)="navigatePage('login')"> Login </button>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 border1 box">
+                        <div class="card-body">
+                            <img class="" src="assets/img/theme/employer.png" alt="Member">
+                            <h3>I'm an Employer (i-Akaun)</h3>
+                            <button class=" btn btn-try btn-outline-default" type="button"
+                                (click)="navigatePage('login')"> Login </button>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 border1">
+                        <div class="card-body">
+                            <h3>Everything About EPF</h3>
+                            <ul class="list-group list-group-flush list">
+                                <a href="#">
+                                    <li class="list-group-item px-0">
+                                        <div class="listcnt">
+                                            <div class=" row align-items-center">
+                                                <div class=" col-auto">
+                                                    <a class=" avatar rounded-circle">
+                                                        <img alt="Image placeholder bg-default"
+                                                            src="assets/img/icons/common/icon-myepf-jto.svg" />
+                                                    </a>
+                                                </div>
+
+                                                <div class=" col">
+                                                    <h4><strong> Janji Temu Online </strong></h4>
+                                                    <h5>Plan your appointment at ease online!</h5>
+                                                </div>
+
+                                                <i class=" fas fa-angle-right"> </i>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </a>
+                                <a href="#">
+                                    <li class="list-group-item px-0">
+                                        <div class="listcnt">
+                                            <div class=" row align-items-center">
+                                                <div class=" col-auto">
+                                                    <a class=" avatar rounded-circle">
+                                                        <img alt="Image placeholder bg-default"
+                                                            src="assets/img/icons/common/icon-myepf-jto.svg" />
+                                                    </a>
+                                                </div>
+
+                                                <div class=" col">
+                                                    <h4><strong> Corporate Information </strong></h4>
+                                                    <h5>Who are we & what we do</h5>
+                                                </div>
+
+                                                <i class=" fas fa-angle-right"> </i>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </a>
+                                <a href="#">
+                                    <li class="list-group-item px-0">
+                                        <div class="listcnt">
+                                            <div class=" row align-items-center">
+                                                <div class=" col-auto">
+                                                    <a class=" avatar rounded-circle">
+                                                        <img alt="Image placeholder bg-default"
+                                                            src="assets/img/icons/common/icon-myepf-jto.svg" />
+                                                    </a>
+                                                </div>
+
+                                                <div class=" col">
+                                                    <h4><strong> Careers </strong></h4>
+                                                    <h5>Make a different with us</h5>
+                                                </div>
+
+                                                <i class=" fas fa-angle-right"> </i>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </a>
+                                <a href="#">
+                                    <li class="list-group-item px-0">
+                                        <div class="listcnt">
+                                            <div class=" row align-items-center">
+                                                <div class=" col-auto">
+                                                    <a class=" avatar rounded-circle">
+                                                        <img alt="Image placeholder bg-default"
+                                                            src="assets/img/icons/common/icon-myepf-jto.svg" />
+                                                    </a>
+                                                </div>
+
+                                                <div class=" col">
+                                                    <h4><strong> Procurement </strong></h4>
+                                                    <h5>Apply for tenders or submit a quote</h5>
+                                                </div>
+
+                                                <i class=" fas fa-angle-right"> </i>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </a>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 border1">
+                        <div class="card-body">
+                            <h3>Latest Update</h3>
+                            <ul class="list-group list-group-flush list">
+                                <a href="#">
+                                    <li class="list-group-item px-0">
+                                        <div class="listcnt">
+                                            <div class=" row align-items-center">
+                                                <div class=" col-auto">
+                                                    <a class=" avatar rounded-circle">
+                                                        <img alt="Image placeholder bg-default"
+                                                            src="assets/img/icons/common/icon-myepf-jto.svg" />
+                                                    </a>
+                                                </div>
+
+                                                <div class=" col">
+                                                    <h4><strong>[INFO]</strong>
+                                                        PAYMENT FOR CURRENT i-SINAR APPLICATIONS TO BEGIN 2 MARCH 2021
+                                                    </h4>
+                                                </div>
+
+                                                <i class=" fas fa-angle-right"> </i>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </a>
+                                <a href="#">
+                                    <li class="list-group-item px-0">
+                                        <div class="listcnt">
+                                            <div class=" row align-items-center">
+                                                <div class=" col-auto">
+                                                    <a class=" avatar rounded-circle">
+                                                        <img alt="Image placeholder bg-default"
+                                                            src="assets/img/icons/common/icon-myepf-jto.svg" />
+                                                    </a>
+                                                </div>
+
+                                                <div class=" col">
+                                                    <h4><strong>[INFO]</strong>
+                                                        PAYMENT FOR CURRENT i-SINAR APPLICATIONS TO BEGIN 2 MARCH 2021
+                                                    </h4>
+                                                </div>
+
+                                                <i class=" fas fa-angle-right"> </i>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </a>
+                                <a href="#">
+                                    <li class="list-group-item px-0">
+                                        <div class="listcnt">
+                                            <div class=" row align-items-center">
+                                                <div class=" col-auto">
+                                                    <a class=" avatar rounded-circle">
+                                                        <img alt="Image placeholder bg-default"
+                                                            src="assets/img/icons/common/icon-myepf-jto.svg" />
+                                                    </a>
+                                                </div>
+
+                                                <div class=" col">
+                                                    <h4><strong>[INFO]</strong>
+                                                        PAYMENT FOR CURRENT i-SINAR APPLICATIONS TO BEGIN 2 MARCH 2021
+                                                    </h4>
+                                                </div>
+
+                                                <i class=" fas fa-angle-right"> </i>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </a>
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

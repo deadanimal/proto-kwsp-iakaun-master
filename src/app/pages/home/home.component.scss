@@ -1,0 +1,45 @@
+.img-carousel {
+    display: block;
+    width: 100%;
+    height: 500px;
+    padding: 0;
+    margin: 0;
+    left: 0;
+    right: 0;
+}
+
+.carousel-indicators li {
+    width: 10px;
+    height: 10px;
+    border-top: none;
+    border-bottom: none;
+}
+
+.border1 {
+    border-left: 1px solid;
+}
+
+.box {
+    // background: #2db34a;
+    // border-radius: 6px;
+    cursor: pointer;
+    height: auto;
+    line-height: 95px;
+    text-align: center;
+    transition-property: background;
+    transition-duration: 1s;
+    transition-timing-function: linear;
+    width: auto;
+}
+.box:hover {
+    background: #cca343;
+}
+
+.btn-try {
+    width: 60%;
+    border-radius: 30px;
+}
+
+.btn-try:hover {
+    background: #172b4d;
+}
